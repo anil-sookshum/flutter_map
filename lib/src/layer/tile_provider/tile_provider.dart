@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:cached_network_image/cached_network_image.dart';
+// import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_image/network.dart';
 import 'package:flutter_map/flutter_map.dart';
@@ -66,7 +66,7 @@ class CachedNetworkTileProvider extends TileProvider {
 
   @override
   ImageProvider getImage(Coords<num> coords, TileLayerOptions options) {
-    return CachedNetworkImageProvider(getTileUrl(coords, options));
+    return NetworkImageWithRetry(getTileUrl(coords, options));
   }
 }
 

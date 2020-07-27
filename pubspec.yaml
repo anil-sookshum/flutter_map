@@ -18,8 +18,9 @@ dependencies:
   transparent_image: ^1.0.0
   async: ^2.1.0
   flutter_image: ^3.0.0
-  cached_network_image: ^2.0.0
-  sqflite: ^1.1.5
+  # cached_network_image: ^2.0.0
+  sqflite: 
+    git: https://github.com/anil-sookshum/encrypted_sqlite
   path_provider: ^1.6.7
   vector_math: ^2.0.0
   proj4dart: ^1.0.4

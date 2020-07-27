@@ -32,7 +32,7 @@ class MBTilesImageProvider extends TileProvider {
     if (_loadedDb == null) {
       var file = mbtilesFile ?? await copyFileFromAssets();
 
-      _loadedDb = await openDatabase(file.path);
+      _loadedDb = await openDatabase(file.path, 'password');
 
       if (isDisposed) {
         await _loadedDb.close();
